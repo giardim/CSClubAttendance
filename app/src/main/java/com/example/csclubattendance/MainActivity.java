@@ -20,31 +20,22 @@ public class MainActivity extends AppCompatActivity {
         btn_addUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeActivity_addUser();
+                changeActivity(addUser.class);
             }
         });
 
         btn_signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                changeActivity_signIn();
+                changeActivity(signIn.class);
             }
         });
 
     }
 
-    public void changeActivity_addUser(){
-        Intent change = new Intent(this, addUser.class);
+    public void changeActivity(Class activity){
+        Intent change = new Intent(this, activity);
         startActivity(change);
     }
 
-    public void changeActivity_signIn(){
-        Intent change = new Intent(this, signIn.class);
-        startActivity(change);
-    }
-
-    public void changeActivity_main(){
-        Intent change = new Intent(this, MainActivity.class);
-        startActivity(change);
-    }
 }

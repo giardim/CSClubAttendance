@@ -17,8 +17,9 @@ public class addUser extends AppCompatActivity {
         returnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity ma = new MainActivity();
-                ma.changeActivity_main();
+//                MainActivity ma = new MainActivity();
+//                ma.changeActivity(MainActivity.class);
+                finish();
             }
         });
     }
